@@ -112,61 +112,50 @@ function Index() {
         </div>
       </section>
 
-      <section id="about" className="font-poppins bg-navy px-[10%] py-[80px] text-white">
-        <h2 className="section-title mb-16 text-center text-[32px] font-bold sm:text-[38px]">
-          About <span className="text-cyan">Me</span>
+      <section id="about" className="about">
+        <h2 className="section-title">
+          About <span>Me</span>
         </h2>
-        <div className="about-container flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
-          <div className="about-image w-full max-w-[400px] lg:w-[40%]">
-            <div className="overflow-hidden rounded-2xl border-[5px] border-cyan shadow-[0_0_30px_#00abf0]">
-              <img
-                src={profileAsset.url}
-                alt="Priyanka Rani"
-                className="h-full w-full object-cover"
-              />
-            </div>
+        <div className="about-container">
+          <div className="about-image">
+            <img src={profileAsset.url} alt="Priyanka Rani" />
           </div>
-          <div className="about-content w-full lg:w-[60%]">
-            <h3 className="mb-5 text-[26px] font-semibold">
-              Hi, I'm Priyanka Rani 👋
-            </h3>
-            <p className="mb-4 leading-[1.8] text-text-muted">
+          <div className="about-content">
+            <h3>Hi, I'm Priyanka Rani 👋</h3>
+            <p>
               I am a First-Year B.Tech Information Technology student and
               Programmer Intern with a strong passion for Software Development,
               Web Development, and Artificial Intelligence.
             </p>
-            <p className="mb-4 leading-[1.8] text-text-muted">
+            <p>
               I enjoy learning new technologies, solving real-world problems,
               and building modern, responsive websites using HTML, CSS,
               JavaScript, Python, and React.
             </p>
-            <p className="mb-8 leading-[1.8] text-text-muted">
+            <p>
               My goal is to become a skilled Software Engineer and contribute
               to innovative technology solutions while continuously improving
               my technical and problem-solving skills.
             </p>
-            <div className="about-info mb-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <div className="info-card rounded-xl bg-[#0f2640] p-5 transition-all duration-[400ms] hover:-translate-y-1 hover:shadow-[0_0_20px_#00abf0]">
-                <h4 className="mb-1 text-sm font-medium text-cyan">Name</h4>
-                <span className="text-lg font-semibold">Priyanka Rani</span>
+            <div className="about-info">
+              <div className="info-card">
+                <h4>Name</h4>
+                <span>Priyanka Rani</span>
               </div>
-              <div className="info-card rounded-xl bg-[#0f2640] p-5 transition-all duration-[400ms] hover:-translate-y-1 hover:shadow-[0_0_20px_#00abf0]">
-                <h4 className="mb-1 text-sm font-medium text-cyan">Education</h4>
-                <span className="text-lg font-semibold">B.Tech IT (2029)</span>
+              <div className="info-card">
+                <h4>Education</h4>
+                <span>B.Tech IT (2029)</span>
               </div>
-              <div className="info-card rounded-xl bg-[#0f2640] p-5 transition-all duration-[400ms] hover:-translate-y-1 hover:shadow-[0_0_20px_#00abf0]">
-                <h4 className="mb-1 text-sm font-medium text-cyan">College</h4>
-                <span className="text-lg font-semibold">UCET</span>
+              <div className="info-card">
+                <h4>College</h4>
+                <span>UCET</span>
               </div>
-              <div className="info-card rounded-xl bg-[#0f2640] p-5 transition-all duration-[400ms] hover:-translate-y-1 hover:shadow-[0_0_20px_#00abf0]">
-                <h4 className="mb-1 text-sm font-medium text-cyan">Experience</h4>
-                <span className="text-lg font-semibold">Programmer Intern</span>
+              <div className="info-card">
+                <h4>Experience</h4>
+                <span>Programmer Intern</span>
               </div>
             </div>
-            <a
-              href="#contact"
-              className="about-btn inline-block rounded-full bg-cyan px-9 py-4 text-white no-underline transition-all duration-[400ms] hover:-translate-y-1 hover:shadow-[0_0_25px_#00abf0]"
-            >
+            <a href="#contact" className="about-btn">
               Let's Connect
             </a>
           </div>
