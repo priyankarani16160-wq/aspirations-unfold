@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import profileAsset from "@/assets/priyanka-profile.jpg.asset.json";
+import profileAsset from "@/assets/priyanka-profile-cropped.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
