@@ -71,10 +71,10 @@ function TypingEffect() {
 
 function Index() {
   return (
-    <section className="font-poppins flex min-h-screen items-center justify-between bg-navy px-[10%] py-[70px] text-white">
-      <div className="w-[55%] animate-fade-left">
+    <section className="font-poppins flex min-h-screen flex-col items-center justify-center gap-16 bg-navy px-[10%] py-[70px] text-white lg:flex-row lg:justify-between lg:gap-8">
+      <div className="w-full animate-fade-left text-center lg:w-[55%] lg:text-left">
         <h3 className="text-lg font-medium">Hello, I'm</h3>
-        <h1 className="my-4 text-[60px] font-bold leading-tight">
+        <h1 className="my-4 text-[40px] font-bold leading-tight sm:text-[50px] lg:text-[60px]">
           Priyanka Rani
         </h1>
         <h2 className="h-[45px] text-[34px] text-cyan">
