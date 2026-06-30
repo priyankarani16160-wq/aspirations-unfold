@@ -117,9 +117,6 @@ function Index() {
           About <span>Me</span>
         </h2>
         <div className="about-container">
-          <div className="about-image">
-            <img src={profileAsset.url} alt="Priyanka Rani" />
-          </div>
           <div className="about-content">
             <h3>Hi, I'm Priyanka Rani 👋</h3>
             <p>
