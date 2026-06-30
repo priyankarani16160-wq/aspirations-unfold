@@ -158,6 +158,49 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <section id="skills" className="skills">
+        <h2 className="section-title">
+          My <span>Skills</span>
+        </h2>
+        <div className="skills-container">
+          <SkillCard name="Python" level="90%" skillClass="python" />
+          <SkillCard name="C Programming" level="80%" skillClass="c" />
+          <SkillCard name="HTML" level="95%" skillClass="html" />
+          <SkillCard name="CSS" level="90%" skillClass="css" />
+          <SkillCard name="JavaScript" level="85%" skillClass="js" />
+          <SkillCard name="React" level="75%" skillClass="react" />
+          <SkillCard name="MySQL" level="80%" skillClass="mysql" />
+          <SkillCard name="Git & GitHub" level="85%" skillClass="git" />
+        </div>
+      </section>
     </>
+  );
+}
+
+function SkillCard({
+  name,
+  level,
+  skillClass,
+}: {
+  name: string;
+  level: string;
+  skillClass: string;
+}) {
+  const [animated, setAnimated] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimated(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="skill-card">
+      <h3>{name}</h3>
+      <div className="progress-bar">
+        <div className={`progress ${animated ? skillClass : ""}`} />
+      </div>
+      <span>{level}</span>
+    </div>
   );
 }
