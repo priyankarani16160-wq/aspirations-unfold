@@ -100,7 +100,7 @@ function Index() {
         </div>
       </div>
       <div className="animate-float-image">
-        <div className="flex h-[350px] w-[350px] items-center justify-center overflow-hidden rounded-full border-[6px] border-cyan bg-navy shadow-[0_0_30px_#00abf0]">
+        <div className="flex h-[280px] w-[280px] items-center justify-center overflow-hidden rounded-full border-[6px] border-cyan bg-navy shadow-[0_0_30px_#00abf0] sm:h-[350px] sm:w-[350px]">
           <span className="px-6 text-center text-sm text-text-muted">
             Upload your profile photo
           </span>
