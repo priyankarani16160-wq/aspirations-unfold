@@ -177,6 +177,119 @@ function Index() {
           <SkillCard name="Git & GitHub" level="85%" skillClass="git" />
         </div>
       </section>
+
+      <section id="projects" className="projects">
+        <h2 className="section-title">
+          My <span>Projects</span>
+        </h2>
+        <div className="projects-container">
+          <div className="project-card">
+            <img
+              src={portfolioAsset.url}
+              alt="Portfolio Website"
+              loading="lazy"
+              width={1024}
+              height={600}
+            />
+            <div className="project-content">
+              <h3>Portfolio Website</h3>
+              <p>
+                A modern, responsive portfolio website showcasing my skills,
+                projects, education, certifications, and contact information
+                with beautiful animations.
+              </p>
+              <div className="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div className="project-buttons">
+                <a
+                  href="https://github.com/priyankarani16160-wq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                >
+                  GitHub
+                </a>
+                <a href="#" className="btn btn-outline">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <img
+              src={voiceAsset.url}
+              alt="AI Voice Assistant"
+              loading="lazy"
+              width={1024}
+              height={600}
+            />
+            <div className="project-content">
+              <h3>AI Voice Assistant</h3>
+              <p>
+                A Python-based voice assistant capable of opening applications,
+                searching the web, and responding to voice commands.
+              </p>
+              <div className="tech-stack">
+                <span>Python</span>
+                <span>SpeechRecognition</span>
+                <span>pyttsx3</span>
+              </div>
+              <div className="project-buttons">
+                <a
+                  href="https://github.com/priyankarani16160-wq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                >
+                  GitHub
+                </a>
+                <a href="#" className="btn btn-outline">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <img
+              src={weatherAsset.url}
+              alt="Weather App"
+              loading="lazy"
+              width={1024}
+              height={600}
+            />
+            <div className="project-content">
+              <h3>Weather App</h3>
+              <p>
+                A weather application that displays real-time weather
+                information using an API with a modern user interface.
+              </p>
+              <div className="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div className="project-buttons">
+                <a
+                  href="https://github.com/priyankarani16160-wq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                >
+                  GitHub
+                </a>
+                <a href="#" className="btn btn-outline">
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
