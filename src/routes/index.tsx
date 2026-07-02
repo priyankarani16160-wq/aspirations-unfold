@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import profileAsset from "@/assets/priyanka-profile-cropped.jpg.asset.json";
 import portfolioAsset from "@/assets/project-portfolio.jpg.asset.json";
 import voiceAsset from "@/assets/project-voice-assistant.jpg.asset.json";
-import weatherAsset from "@/assets/project-weather.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -254,40 +254,6 @@ function Index() {
             </div>
           </div>
 
-          <div className="project-card">
-            <img
-              src={weatherAsset.url}
-              alt="Weather App"
-              loading="lazy"
-              width={1024}
-              height={600}
-            />
-            <div className="project-content">
-              <h3>Weather App</h3>
-              <p>
-                A weather application that displays real-time weather
-                information using an API with a modern user interface.
-              </p>
-              <div className="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <div className="project-buttons">
-                <a
-                  href="https://github.com/priyankarani16160-wq"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn"
-                >
-                  GitHub
-                </a>
-                <a href="#" className="btn btn-outline">
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </>
