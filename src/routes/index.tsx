@@ -256,6 +256,74 @@ function Index() {
 
         </div>
       </section>
+
+      <section id="certifications" className="certifications">
+        <h2 className="section-title">
+          My <span>Certifications</span>
+        </h2>
+        <div className="certification-container">
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">
+              🐍
+            </div>
+            <h3>Python Programming</h3>
+            <h4>HackerRank</h4>
+            <p>
+              Earned the Python (Basic) certification by solving real-world
+              coding problems and demonstrating strong programming fundamentals.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="certificate-btn"
+            >
+              View Certificate
+            </a>
+          </div>
+
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">
+              🌐
+            </div>
+            <h3>Web Development Fundamentals</h3>
+            <h4>freeCodeCamp</h4>
+            <p>
+              Completed the Responsive Web Design certification, covering HTML,
+              CSS, Flexbox, Grid, and accessibility best practices.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="certificate-btn"
+            >
+              View Certificate
+            </a>
+          </div>
+
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">
+              🤖
+            </div>
+            <h3>AI / ML Workshop</h3>
+            <h4>College Tech Fest</h4>
+            <p>
+              Participated in a hands-on Artificial Intelligence and Machine
+              Learning workshop exploring Python libraries and AI basics.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="certificate-btn"
+            >
+              View Certificate
+            </a>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
