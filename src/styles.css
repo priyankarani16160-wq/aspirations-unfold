@@ -577,5 +577,137 @@
   }
 }
 
+/*==================== CONTACT ====================*/
+
+
+.contact {
+  padding: 100px 10%;
+  background: #0d1b2a;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  margin-top: 60px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.contact-info p {
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.35);
+}
+
+.contact-icon {
+  font-size: 24px;
+}
+
+.contact-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.contact-item a:hover {
+  color: #00abf0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00abf0;
+  box-shadow: 0 0 15px rgba(0, 171, 240, 0.3);
+}
+
+.contact-btn {
+  padding: 15px 30px;
+  background: #00abf0;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00abf0;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 

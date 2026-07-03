@@ -343,6 +343,61 @@ function Index() {
         </div>
       </section>
 
+      <section id="contact" className="contact">
+        <h2 className="section-title">
+          Contact <span>Me</span>
+        </h2>
+        <div className="contact-container">
+          <div className="contact-info">
+            <h3>Let's Connect!</h3>
+            <p>
+              I'm always open to internship opportunities, collaborations, and
+              exciting projects. Feel free to contact me.
+            </p>
+            <div className="contact-details">
+              <div className="contact-item">
+                <span className="contact-icon" aria-hidden="true">
+                  📧
+                </span>
+                <a href="mailto:priyankarani16160@gmail.com">
+                  priyankarani16160@gmail.com
+                </a>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon" aria-hidden="true">
+                  💼
+                </span>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  LinkedIn Profile
+                </a>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon" aria-hidden="true">
+                  🐙
+                </span>
+                <a
+                  href="https://github.com/priyankarani16160-wq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub Profile
+                </a>
+              </div>
+            </div>
+          </div>
+          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows={5} required />
+            <button type="submit" className="contact-btn">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+
+
     </>
   );
 }
