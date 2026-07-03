@@ -257,6 +257,92 @@ function Index() {
         </div>
       </section>
 
+      <section id="certifications" className="certifications">
+        <h2 className="section-title">
+          My <span>Certifications</span>
+        </h2>
+        <div className="certification-container">
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">🛡️</div>
+            <h3>Cybersecurity Course</h3>
+            <h4>Cisco Networking Academy</h4>
+            <p>
+              Successfully completed a cybersecurity course covering networking
+              fundamentals, cyber threats, online safety, and security best
+              practices.
+            </p>
+            <a href="#" className="certificate-btn">
+              View Certificate
+            </a>
+          </div>
+
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">💻</div>
+            <h3>Software Engineering Job Simulation</h3>
+            <h4>JPMorgan Chase & Co.</h4>
+            <p>
+              Completed a virtual software engineering job simulation focused on
+              real-world development tasks and problem-solving.
+            </p>
+            <a href="#" className="certificate-btn">
+              View Certificate
+            </a>
+          </div>
+
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">🤖</div>
+            <h3>Yuva AI</h3>
+            <h4>FutureSkills Prime</h4>
+            <p>
+              Learned Artificial Intelligence fundamentals, machine learning
+              concepts, and emerging AI technologies.
+            </p>
+            <a href="#" className="certificate-btn">
+              View Certificate
+            </a>
+          </div>
+
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">🔐</div>
+            <h3>Cyber Job Simulation</h3>
+            <h4>Deloitte</h4>
+            <p>
+              Completed a cybersecurity virtual experience involving threat
+              detection, investigation, and cyber risk analysis.
+            </p>
+            <a href="#" className="certificate-btn">
+              View Certificate
+            </a>
+          </div>
+
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">✨</div>
+            <h3>Introduction to Generative AI Studio</h3>
+            <h4>Simplilearn</h4>
+            <p>
+              Explored Generative AI, prompt engineering, and practical AI
+              applications using modern tools.
+            </p>
+            <a href="#" className="certificate-btn">
+              View Certificate
+            </a>
+          </div>
+
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">🎓</div>
+            <h3>TCS iON Career Edge – Young Professional</h3>
+            <h4>Tata Consultancy Services</h4>
+            <p>
+              Developed professional communication, business etiquette,
+              presentation, and workplace readiness skills.
+            </p>
+            <a href="#" className="certificate-btn">
+              View Certificate
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="contact">
         <h2 className="section-title">
           Contact <span>Me</span>
@@ -281,11 +367,7 @@ function Index() {
                 <span className="contact-icon" aria-hidden="true">
                   💼
                 </span>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="#" target="_blank" rel="noopener noreferrer">
                   LinkedIn Profile
                 </a>
               </div>
@@ -313,6 +395,7 @@ function Index() {
           </form>
         </div>
       </section>
+
 
 
     </>
