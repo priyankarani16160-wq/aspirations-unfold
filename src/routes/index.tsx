@@ -363,27 +363,8 @@ function Index() {
                   priyankarani16160@gmail.com
                 </a>
               </div>
-              <div className="contact-item">
-                <span className="contact-icon" aria-hidden="true">
-                  💼
-                </span>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profile
-                </a>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon" aria-hidden="true">
-                  🐙
-                </span>
-                <a
-                  href="https://github.com/priyankarani16160-wq"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub Profile
-                </a>
-              </div>
             </div>
+
           </div>
           <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
             <input type="text" placeholder="Your Name" required />
