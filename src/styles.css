@@ -506,76 +506,136 @@
   }
 }
 
-/*==================== CERTIFICATIONS ====================*/
+/*==================== CONTACT ====================*/
 
-.certifications {
+.contact {
   padding: 100px 10%;
-  background: #081b29;
+  background: #0d1b2a;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 
-.certification-container {
+.contact-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  gap: 50px;
   margin-top: 60px;
+  align-items: start;
 }
 
-.certificate-card {
+.contact-info h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.contact-info p {
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.35);
+}
+
+.contact-icon {
+  font-size: 24px;
+}
+
+.contact-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.contact-item a:hover {
+  color: #00abf0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 35px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  transition: 0.4s;
 }
 
-.certificate-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 0 25px rgba(0, 171, 240, 0.4);
-}
-
-.certificate-icon {
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-
-.certificate-card h3 {
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
   color: #fff;
-  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  resize: none;
 }
 
-.certificate-card h4 {
-  color: #00abf0;
-  margin-bottom: 15px;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
 }
 
-.certificate-card p {
-  color: #ddd;
-  line-height: 1.7;
-  margin-bottom: 25px;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00abf0;
+  box-shadow: 0 0 15px rgba(0, 171, 240, 0.3);
 }
 
-.certificate-btn {
-  text-decoration: none;
+.contact-btn {
+  padding: 15px 30px;
   background: #00abf0;
   color: #fff;
-  padding: 12px 30px;
+  border: none;
   border-radius: 30px;
-  transition: 0.3s;
-  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  font-family: "Poppins", sans-serif;
 }
 
-.certificate-btn:hover {
-  background: #0085c7;
-  transform: scale(1.05);
+.contact-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00abf0;
 }
 
 @media (max-width: 768px) {
-  .certification-container {
+  .contact-container {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
