@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import profileAsset from "@/assets/priyanka-profile-cropped.jpg.asset.json";
 import portfolioAsset from "@/assets/project-portfolio.jpg.asset.json";
 import voiceAsset from "@/assets/project-voice-assistant.jpg.asset.json";
+
 
 
 export const Route = createFileRoute("/")({
@@ -106,6 +107,39 @@ function ThemeToggle() {
   );
 }
 
+function ParticleBackground() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+
+    const createParticle = () => {
+      const particle = document.createElement("span");
+      particle.className = "particle";
+      const size = Math.random() * 8 + 4;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${Math.random() * window.innerWidth}px`;
+      particle.style.animationDuration = `${Math.random() * 10 + 8}s`;
+      particle.style.opacity = String(Math.random() * 0.4 + 0.1);
+      particle.style.background = `rgba(${100 + Math.random() * 155}, ${100 + Math.random() * 155}, 255, 0.4)`;
+      container.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 18000);
+    };
+
+    const interval = setInterval(createParticle, 250);
+    return () => clearInterval(interval);
+  }, []);
+
+  return <div ref={containerRef} id="particles" aria-hidden="true" />;
+}
+
+
 function Navbar() {
   const [active, setActive] = useState("");
 
@@ -205,6 +239,7 @@ function BackToTop() {
 function Index() {
   return (
     <>
+      <ParticleBackground />
       <Navbar />
       <ThemeToggle />
 
@@ -212,6 +247,7 @@ function Index() {
         id="home"
         className="font-poppins flex min-h-screen flex-col items-center justify-center gap-16 bg-navy px-[10%] pb-[70px] pt-[120px] text-white lg:flex-row lg:justify-between lg:gap-8"
       >
+
 
         <div className="w-full animate-fade-left text-center lg:w-[55%] lg:text-left">
           <h3 className="text-lg font-medium">Hello, I'm</h3>

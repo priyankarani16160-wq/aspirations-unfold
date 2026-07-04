@@ -1014,3 +1014,38 @@
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 0 30px rgba(0, 171, 240, 0.8);
 }
+
+/*==================== PARTICLES BACKGROUND ====================*/
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: rgba(0, 171, 240, 0.4);
+  box-shadow: 0 0 10px rgba(0, 171, 240, 0.4);
+  animation-name: float-particle;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-120vh) scale(0.5);
+    opacity: 0;
+  }
+}
