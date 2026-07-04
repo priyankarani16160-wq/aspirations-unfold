@@ -96,6 +96,7 @@ function ThemeToggle() {
 
   return (
     <button
+      id="theme-toggle"
       onClick={toggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       className="fixed top-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan bg-navy text-xl shadow-[0_0_20px_rgba(0,171,240,0.4)] transition-transform duration-300 hover:scale-110"
@@ -105,12 +106,113 @@ function ThemeToggle() {
   );
 }
 
+function Navbar() {
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      const scrollY = window.scrollY;
+      let current = "";
+      sections.forEach((section) => {
+        const id = section.getAttribute("id") || "";
+        const offset = section.getBoundingClientRect().top + window.scrollY - 150;
+        const height = section.getBoundingClientRect().height;
+        if (scrollY >= offset && scrollY < offset + height) {
+          current = id;
+        }
+      });
+      setActive(current);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollTo = (id: string) => {
+    if (id === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const section = document.getElementById(id);
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const links = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "projects", label: "Projects" },
+    { id: "certifications", label: "Certifications" },
+    { id: "contact", label: "Contact" },
+  ];
+
+  return (
+    <nav className="navbar">
+      <a
+        href="#home"
+        className="nav-logo"
+        onClick={(e) => {
+          e.preventDefault();
+          scrollTo("home");
+        }}
+      >
+        Priyanka
+      </a>
+      <ul className="nav-links">
+        {links.map(({ id, label }) => (
+          <li key={id}>
+            <a
+              href={`#${id}`}
+              className={active === id ? "active" : ""}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo(id);
+              }}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+function BackToTop() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setVisible(window.scrollY > 400);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  if (!visible) return null;
+
+  return (
+    <button
+      className="top-btn"
+      aria-label="Back to top"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    >
+      ↑
+    </button>
+  );
+}
+
+
 function Index() {
   return (
     <>
+      <Navbar />
       <ThemeToggle />
 
-      <section className="font-poppins flex min-h-screen flex-col items-center justify-center gap-16 bg-navy px-[10%] py-[70px] text-white lg:flex-row lg:justify-between lg:gap-8">
+      <section
+        id="home"
+        className="font-poppins flex min-h-screen flex-col items-center justify-center gap-16 bg-navy px-[10%] pb-[70px] pt-[120px] text-white lg:flex-row lg:justify-between lg:gap-8"
+      >
+
         <div className="w-full animate-fade-left text-center lg:w-[55%] lg:text-left">
           <h3 className="text-lg font-medium">Hello, I'm</h3>
           <h1 className="my-4 text-[40px] font-bold leading-tight sm:text-[50px] lg:text-[60px]">
@@ -432,11 +534,11 @@ function Index() {
         </div>
       </section>
 
-
-
+      <BackToTop />
     </>
   );
 }
+
 
 function SkillCard({
   name,
