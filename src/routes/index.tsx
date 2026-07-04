@@ -108,7 +108,8 @@ function ThemeToggle() {
 }
 
 function ParticleBackground() {
-  const containerRef = React.useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
 
   useEffect(() => {
     if (!containerRef.current) return;
