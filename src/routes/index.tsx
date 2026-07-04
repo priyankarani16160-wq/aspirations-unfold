@@ -534,11 +534,11 @@ function Index() {
         </div>
       </section>
 
-
-
+      <BackToTop />
     </>
   );
 }
+
 
 function SkillCard({
   name,
