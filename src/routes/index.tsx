@@ -73,9 +73,43 @@ function TypingEffect() {
   );
 }
 
+function ThemeToggle() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.body.classList.add("dark");
+      setIsDark(true);
+    } else {
+      document.body.classList.remove("dark");
+      setIsDark(false);
+    }
+  }, []);
+
+  const toggle = () => {
+    document.body.classList.toggle("dark");
+    const next = document.body.classList.contains("dark");
+    setIsDark(next);
+    localStorage.setItem("theme", next ? "dark" : "light");
+  };
+
+  return (
+    <button
+      onClick={toggle}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      className="fixed top-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan bg-navy text-xl shadow-[0_0_20px_rgba(0,171,240,0.4)] transition-transform duration-300 hover:scale-110"
+    >
+      {isDark ? "☀️" : "🌙"}
+    </button>
+  );
+}
+
 function Index() {
   return (
     <>
+      <ThemeToggle />
+
       <section className="font-poppins flex min-h-screen flex-col items-center justify-center gap-16 bg-navy px-[10%] py-[70px] text-white lg:flex-row lg:justify-between lg:gap-8">
         <div className="w-full animate-fade-left text-center lg:w-[55%] lg:text-left">
           <h3 className="text-lg font-medium">Hello, I'm</h3>
