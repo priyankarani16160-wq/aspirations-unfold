@@ -239,6 +239,7 @@ function BackToTop() {
 function Index() {
   return (
     <>
+      <ParticleBackground />
       <Navbar />
       <ThemeToggle />
 
@@ -246,6 +247,7 @@ function Index() {
         id="home"
         className="font-poppins flex min-h-screen flex-col items-center justify-center gap-16 bg-navy px-[10%] pb-[70px] pt-[120px] text-white lg:flex-row lg:justify-between lg:gap-8"
       >
+
 
         <div className="w-full animate-fade-left text-center lg:w-[55%] lg:text-left">
           <h3 className="text-lg font-medium">Hello, I'm</h3>
