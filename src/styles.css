@@ -711,3 +711,196 @@
 
 
 
+
+/* ===========================
+   FADE ANIMATIONS
+=========================== */
+
+.fade-in{
+    opacity:0;
+    animation:fadeIn 1s forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* ===========================
+   FADE UP
+=========================== */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(80px);
+    transition:1s;
+}
+
+.fade-up.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===========================
+   FADE LEFT
+=========================== */
+
+.fade-left{
+    opacity:0;
+    transform:translateX(-80px);
+    transition:1s;
+}
+
+.fade-left.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* ===========================
+   FADE RIGHT
+=========================== */
+
+.fade-right{
+    opacity:0;
+    transform:translateX(80px);
+    transition:1s;
+}
+
+.fade-right.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* ===========================
+   ZOOM
+=========================== */
+
+.zoom{
+    opacity:0;
+    transform:scale(.7);
+    transition:1s;
+}
+
+.zoom.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+/* ===========================
+   FLOAT
+=========================== */
+
+.float{
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* ===========================
+   BOUNCE
+=========================== */
+
+.bounce:hover{
+    animation:bounce .6s;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    30%{
+        transform:translateY(-12px);
+    }
+    60%{
+        transform:translateY(6px);
+    }
+}
+
+/* ===========================
+   CARD HOVER
+=========================== */
+
+.card{
+    transition:.5s;
+    border-radius:20px;
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+/* ===========================
+   BUTTON HOVER
+=========================== */
+
+.btn{
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #5f6fff;
+}
+
+/* ===========================
+   IMAGE HOVER
+=========================== */
+
+.image-hover{
+    transition:.5s;
+}
+
+.image-hover:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   ROTATE
+=========================== */
+
+.rotate:hover{
+    transform:rotate(8deg);
+    transition:.5s;
+}
+
+/* ===========================
+   GRADIENT ANIMATION
+=========================== */
+
+.gradient{
+    background:linear-gradient(
+        45deg,
+        #4facfe,
+        #00f2fe,
+        #7b61ff,
+        #4facfe);
+    background-size:300%;
+    animation:gradient 8s infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position:0%;
+    }
+    50%{
+        background-position:100%;
+    }
+    100%{
+        background-position:0%;
+    }
+}
