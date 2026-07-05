@@ -350,6 +350,23 @@ function Index() {
         </div>
       </section>
 
+      <section className="skills-section">
+        <h2>My Tech Stack</h2>
+        <div className="solar-system">
+          <div className="sun">
+            <img src={profileAsset.url} alt="Priyanka" />
+          </div>
+          <div className="orbit orbit1"><div className="planet html">🌐</div></div>
+          <div className="orbit orbit2"><div className="planet css">🎨</div></div>
+          <div className="orbit orbit3"><div className="planet js">⚡</div></div>
+          <div className="orbit orbit4"><div className="planet python">🐍</div></div>
+          <div className="orbit orbit5"><div className="planet react">⚛</div></div>
+          <div className="orbit orbit6"><div className="planet mysql">🗄</div></div>
+          <div className="orbit orbit7"><div className="planet git">🐙</div></div>
+          <div className="orbit orbit8"><div className="planet github">💻</div></div>
+        </div>
+      </section>
+
       <section id="projects" className="projects">
         <h2 className="section-title">
           My <span>Projects</span>
