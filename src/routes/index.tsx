@@ -277,6 +277,7 @@ function Index() {
       <ParticleBackground />
       <Navbar />
       <ThemeToggle />
+      <MusicToggle />
 
       <section
         id="home"
