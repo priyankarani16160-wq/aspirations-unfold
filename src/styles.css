@@ -1049,3 +1049,109 @@
     opacity: 0;
   }
 }
+
+/* ===========================
+   SOLAR SYSTEM SKILLS
+=========================== */
+.skills-section {
+  padding: 100px 10% 120px;
+  text-align: center;
+  background: var(--bg-navy, #081b29);
+  color: #fff;
+  overflow: hidden;
+}
+.skills-section h2 {
+  font-size: 42px;
+  margin-bottom: 80px;
+}
+.solar-system {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #00abf0;
+  box-shadow: 0 0 40px #00abf0, 0 0 80px rgba(0, 171, 240, 0.5);
+  z-index: 5;
+}
+.sun img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(0, 171, 240, 0.35);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin linear infinite;
+}
+.orbit1 { width: 180px; height: 180px; animation-duration: 8s; }
+.orbit2 { width: 240px; height: 240px; animation-duration: 11s; }
+.orbit3 { width: 300px; height: 300px; animation-duration: 14s; }
+.orbit4 { width: 360px; height: 360px; animation-duration: 17s; }
+.orbit5 { width: 420px; height: 420px; animation-duration: 20s; }
+.orbit6 { width: 480px; height: 480px; animation-duration: 23s; }
+.orbit7 { width: 540px; height: 540px; animation-duration: 26s; }
+.orbit8 { width: 600px; height: 600px; animation-duration: 29s; }
+
+.planet {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border-radius: 50%;
+  background: #112e42;
+  border: 2px solid #00abf0;
+  box-shadow: 0 0 15px rgba(0, 171, 240, 0.6);
+  animation: spin-reverse linear infinite;
+}
+.orbit1 .planet { animation-duration: 8s; }
+.orbit2 .planet { animation-duration: 11s; }
+.orbit3 .planet { animation-duration: 14s; }
+.orbit4 .planet { animation-duration: 17s; }
+.orbit5 .planet { animation-duration: 20s; }
+.orbit6 .planet { animation-duration: 23s; }
+.orbit7 .planet { animation-duration: 26s; }
+.orbit8 .planet { animation-duration: 29s; }
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes spin-reverse {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(-360deg); }
+}
+
+@media (max-width: 640px) {
+  .solar-system { width: 360px; height: 360px; }
+  .sun { width: 80px; height: 80px; }
+  .orbit1 { width: 120px; height: 120px; }
+  .orbit2 { width: 155px; height: 155px; }
+  .orbit3 { width: 190px; height: 190px; }
+  .orbit4 { width: 225px; height: 225px; }
+  .orbit5 { width: 260px; height: 260px; }
+  .orbit6 { width: 295px; height: 295px; }
+  .orbit7 { width: 330px; height: 330px; }
+  .orbit8 { width: 360px; height: 360px; }
+  .planet { width: 32px; height: 32px; font-size: 16px; top: -16px; }
+}
