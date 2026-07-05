@@ -107,6 +107,41 @@ function ThemeToggle() {
   );
 }
 
+function MusicToggle() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggle = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (!isPlaying) {
+      audio.volume = 0.3;
+      audio.play().catch(() => {
+        // Autoplay blocked by browser policy — user must interact again.
+      });
+      setIsPlaying(true);
+    } else {
+      audio.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  return (
+    <>
+      <audio ref={audioRef} id="bgMusic" loop src="/background-music.mp3" />
+      <button
+        id="musicBtn"
+        onClick={toggle}
+        aria-label={isPlaying ? "Pause background music" : "Play background music"}
+        className="fixed top-20 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan bg-navy text-xl shadow-[0_0_20px_rgba(0,171,240,0.4)] transition-transform duration-300 hover:scale-110"
+      >
+        {isPlaying ? "🎵" : "🔇"}
+      </button>
+    </>
+  );
+}
+
 function ParticleBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -242,6 +277,7 @@ function Index() {
       <ParticleBackground />
       <Navbar />
       <ThemeToggle />
+      <MusicToggle />
 
       <section
         id="home"
