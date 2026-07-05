@@ -372,7 +372,8 @@ function Index() {
           My <span>Projects</span>
         </h2>
         <div className="projects-container">
-          <div className="project-card">
+          <div className="crystal-card">
+            <div className="shine" />
             <img
               src={portfolioAsset.url}
               alt="Portfolio Website"
@@ -380,35 +381,35 @@ function Index() {
               width={1024}
               height={600}
             />
-            <div className="project-content">
-              <h3>Portfolio Website</h3>
-              <p>
-                A modern, responsive portfolio website showcasing my skills,
-                projects, education, certifications, and contact information
-                with beautiful animations.
-              </p>
-              <div className="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <div className="project-buttons">
-                <a
-                  href="https://github.com/priyankarani16160-wq"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn"
-                >
-                  GitHub
-                </a>
-                <a href="#" className="btn btn-outline">
-                  Live Demo
-                </a>
-              </div>
+            <div className="icon" aria-hidden="true">💻</div>
+            <h2>Portfolio Website</h2>
+            <p>
+              A modern, responsive portfolio website showcasing my skills,
+              projects, education, certifications, and contact information
+              with beautiful animations.
+            </p>
+            <div className="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div className="project-buttons">
+              <a
+                href="https://github.com/priyankarani16160-wq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
+                GitHub
+              </a>
+              <a href="#" className="btn btn-outline">
+                Live Demo
+              </a>
             </div>
           </div>
 
-          <div className="project-card">
+          <div className="crystal-card">
+            <div className="shine" />
             <img
               src={voiceAsset.url}
               alt="AI Voice Assistant"
@@ -416,33 +417,31 @@ function Index() {
               width={1024}
               height={600}
             />
-            <div className="project-content">
-              <h3>AI Voice Assistant</h3>
-              <p>
-                A Python-based voice assistant capable of opening applications,
-                searching the web, and responding to voice commands.
-              </p>
-              <div className="tech-stack">
-                <span>Python</span>
-                <span>SpeechRecognition</span>
-                <span>pyttsx3</span>
-              </div>
-              <div className="project-buttons">
-                <a
-                  href="https://github.com/priyankarani16160-wq"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn"
-                >
-                  GitHub
-                </a>
-                <a href="#" className="btn btn-outline">
-                  Live Demo
-                </a>
-              </div>
+            <div className="icon" aria-hidden="true">🤖</div>
+            <h2>AI Voice Assistant</h2>
+            <p>
+              A Python-based voice assistant capable of opening applications,
+              searching the web, and responding to voice commands.
+            </p>
+            <div className="tech-stack">
+              <span>Python</span>
+              <span>SpeechRecognition</span>
+              <span>pyttsx3</span>
+            </div>
+            <div className="project-buttons">
+              <a
+                href="https://github.com/priyankarani16160-wq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
+                GitHub
+              </a>
+              <a href="#" className="btn btn-outline">
+                Live Demo
+              </a>
             </div>
           </div>
-
         </div>
       </section>
 
