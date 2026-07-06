@@ -616,6 +616,19 @@ function Index() {
               View Certificate
             </a>
           </div>
+
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">🏅</div>
+            <h3>Draft Impactful Document Using AI</h3>
+            <h4>Microsoft Learn</h4>
+            <p>
+              Earned a Microsoft Learn badge demonstrating the ability to use
+              AI tools to draft clear, effective, and impactful documents.
+            </p>
+            <a href="#" className="certificate-btn">
+              View Certificate
+            </a>
+          </div>
         </div>
       </section>
 
