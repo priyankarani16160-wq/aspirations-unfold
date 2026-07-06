@@ -361,6 +361,7 @@ function Index() {
               Download Resume
             </a>
           </div>
+          <VoiceIntro />
         </div>
         <div className="animate-float-image">
           <div className="flex h-[280px] w-[280px] items-center justify-center overflow-hidden rounded-full border-[6px] border-cyan bg-navy shadow-[0_0_30px_#00abf0] sm:h-[350px] sm:w-[350px]">
