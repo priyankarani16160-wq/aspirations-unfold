@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import introAudioAsset from "@/assets/intro-audio.mp3.asset.json";
 import profileAsset from "@/assets/priyanka-profile-cropped.jpg.asset.json";
 import portfolioAsset from "@/assets/project-portfolio.jpg.asset.json";
 import voiceAsset from "@/assets/project-voice-assistant.jpg.asset.json";
@@ -137,7 +138,7 @@ function VoiceIntro() {
 
   return (
     <div className="voice-intro">
-      <audio ref={audioRef} id="introAudio" src="/intro-audio.mp3" />
+      <audio ref={audioRef} id="introAudio" src={introAudioAsset.url} />
       <div className={`visualizer ${isPlaying ? "active" : ""}`} aria-hidden="true">
         <span />
         <span />
