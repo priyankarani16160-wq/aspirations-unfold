@@ -107,6 +107,56 @@ function ThemeToggle() {
   );
 }
 
+function VoiceIntro() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggle = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (audio.paused) {
+      audio.play().catch(() => {
+        // Autoplay blocked by browser policy — user must interact again.
+      });
+      setIsPlaying(true);
+    } else {
+      audio.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const onEnded = () => setIsPlaying(false);
+    audio.addEventListener("ended", onEnded);
+    return () => audio.removeEventListener("ended", onEnded);
+  }, []);
+
+  return (
+    <div className="voice-intro">
+      <audio ref={audioRef} id="introAudio" src="/intro-audio.mp3" />
+      <div className={`visualizer ${isPlaying ? "active" : ""}`} aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+      <button
+        id="voiceBtn"
+        onClick={toggle}
+        className={isPlaying ? "playing" : ""}
+        aria-label={isPlaying ? "Pause introduction" : "Hear my introduction"}
+      >
+        {isPlaying ? "⏸ Pause Introduction" : "🎤 Hear My Introduction"}
+      </button>
+    </div>
+  );
+}
+
 function MusicToggle() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -311,6 +361,7 @@ function Index() {
               Download Resume
             </a>
           </div>
+          <VoiceIntro />
         </div>
         <div className="animate-float-image">
           <div className="flex h-[280px] w-[280px] items-center justify-center overflow-hidden rounded-full border-[6px] border-cyan bg-navy shadow-[0_0_30px_#00abf0] sm:h-[350px] sm:w-[350px]">
