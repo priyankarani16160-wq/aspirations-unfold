@@ -138,7 +138,7 @@ function VoiceIntro() {
 
   return (
     <div className="voice-intro">
-      <audio ref={audioRef} id="introAudio" src="/intro-audio.mp3" />
+      <audio ref={audioRef} id="introAudio" src={introAudioAsset.url} />
       <div className={`visualizer ${isPlaying ? "active" : ""}`} aria-hidden="true">
         <span />
         <span />
