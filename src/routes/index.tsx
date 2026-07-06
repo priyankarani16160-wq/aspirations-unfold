@@ -452,6 +452,18 @@ function Index() {
           <div className="orbit orbit6"><div className="planet mysql">🗄</div></div>
           <div className="orbit orbit7"><div className="planet git">🐙</div></div>
           <div className="orbit orbit8"><div className="planet github">💻</div></div>
+          <div className="certificate-card">
+            <div className="certificate-icon" aria-hidden="true">🏅</div>
+            <h3>Draft Impactful Document Using AI</h3>
+            <h4>Microsoft Learn</h4>
+            <p>
+              Earned a Microsoft Learn badge demonstrating the ability to use
+              AI tools to draft clear, effective, and impactful documents.
+            </p>
+            <a href="#" className="certificate-btn">
+              View Certificate
+            </a>
+          </div>
         </div>
       </section>
 
