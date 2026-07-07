@@ -313,7 +313,7 @@ function Index() {
 
       <section
         id="home"
-        className="font-poppins flex min-h-screen flex-col items-center justify-center gap-16 bg-navy px-[10%] pb-[70px] pt-[120px] text-white lg:flex-row lg:justify-between lg:gap-8"
+        className="font-poppins flex min-h-screen flex-col items-center justify-center gap-16 px-[10%] pb-[70px] pt-[120px] text-white lg:flex-row lg:justify-between lg:gap-8"
       >
 
 
