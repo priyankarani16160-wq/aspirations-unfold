@@ -306,7 +306,7 @@ function BackToTop() {
 function Index() {
   return (
     <>
-      <ParticleBackground />
+      <GradientBackground />
       <Navbar />
       <ThemeToggle />
       <MusicToggle />
