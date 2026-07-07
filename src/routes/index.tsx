@@ -197,14 +197,19 @@ function MusicToggle() {
 function GradientBackground() {
   return (
     <div className="background" aria-hidden="true">
-      <div className="gradient-lights">
-        <div className="glow glow1" />
-        <div className="glow glow2" />
-        <div className="glow glow3" />
-      </div>
+      <img
+        src={techBackgroundAsset.url}
+        alt=""
+        className="background-image"
+        loading="eager"
+        width={1920}
+        height={1080}
+      />
+      <div className="background-overlay" />
     </div>
   );
 }
+
 
 
 
