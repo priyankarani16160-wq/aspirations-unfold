@@ -4,6 +4,7 @@ import introAudioAsset from "@/assets/intro-audio.mp3.asset.json";
 import profileAsset from "@/assets/priyanka-profile-cropped.jpg.asset.json";
 import portfolioAsset from "@/assets/project-portfolio.jpg.asset.json";
 import voiceAsset from "@/assets/project-voice-assistant.jpg.asset.json";
+import techBackgroundAsset from "@/assets/tech-background.jpg.asset.json";
 
 
 
