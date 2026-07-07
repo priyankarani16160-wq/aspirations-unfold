@@ -193,37 +193,18 @@ function MusicToggle() {
   );
 }
 
-function ParticleBackground() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-    const container = containerRef.current;
-
-    const createParticle = () => {
-      const particle = document.createElement("span");
-      particle.className = "particle";
-      const size = Math.random() * 8 + 4;
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      particle.style.left = `${Math.random() * window.innerWidth}px`;
-      particle.style.animationDuration = `${Math.random() * 10 + 8}s`;
-      particle.style.opacity = String(Math.random() * 0.4 + 0.1);
-      particle.style.background = `rgba(${100 + Math.random() * 155}, ${100 + Math.random() * 155}, 255, 0.4)`;
-      container.appendChild(particle);
-
-      setTimeout(() => {
-        particle.remove();
-      }, 18000);
-    };
-
-    const interval = setInterval(createParticle, 250);
-    return () => clearInterval(interval);
-  }, []);
-
-  return <div ref={containerRef} id="particles" aria-hidden="true" />;
+function GradientBackground() {
+  return (
+    <div className="background" aria-hidden="true">
+      <div className="gradient-lights">
+        <div className="glow glow1" />
+        <div className="glow glow2" />
+        <div className="glow glow3" />
+      </div>
+    </div>
+  );
 }
+
 
 
 function Navbar() {
