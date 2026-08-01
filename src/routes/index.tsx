@@ -352,14 +352,12 @@ function Index() {
           </div>
           <VoiceIntro />
         </div>
-        <div className="animate-float-image">
-          <div className="flex h-[280px] w-[280px] items-center justify-center overflow-hidden rounded-full border-[6px] border-cyan bg-navy shadow-[0_0_30px_#00abf0] sm:h-[350px] sm:w-[350px]">
-            <img
-              src={profileAsset.url}
-              alt="Priyanka Rani"
-              className="h-full w-full object-cover"
-            />
-          </div>
+        <div className="animate-float-image hero-image">
+          <img
+            src={aboutProfileAsset.url}
+            alt="Priyanka Rani"
+            loading="lazy"
+          />
         </div>
       </section>
 
@@ -368,9 +366,6 @@ function Index() {
           About <span>Me</span>
         </h2>
         <div className="about-container">
-          <div className="about-image">
-            <img src={aboutProfileAsset.url} alt="Priyanka Rani" loading="lazy" />
-          </div>
           <div className="about-content">
             <h3>Hi, I'm Priyanka Rani 👋</h3>
             <p>
