@@ -239,6 +239,24 @@
   transform: scale(1.05);
 }
 
+.hero-image img {
+  width: 320px;
+  border-radius: 20px;
+  border: 4px solid #00abf0;
+  box-shadow: 0 0 35px rgba(0, 171, 240, 0.4);
+  transition: 0.5s;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  .hero-image img {
+    width: 260px;
+  }
+}
+
 .about-content {
   max-width: 650px;
 }
