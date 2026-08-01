@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import aboutProfileAsset from "@/assets/priyanka-about.png.asset.json";
 import introAudioAsset from "@/assets/intro-audio.mp3.asset.json";
 import profileAsset from "@/assets/priyanka-profile-cropped.jpg.asset.json";
 import portfolioAsset from "@/assets/project-portfolio.jpg.asset.json";
@@ -367,6 +368,9 @@ function Index() {
           About <span>Me</span>
         </h2>
         <div className="about-container">
+          <div className="about-image">
+            <img src={aboutProfileAsset.url} alt="Priyanka Rani" loading="lazy" />
+          </div>
           <div className="about-content">
             <h3>Hi, I'm Priyanka Rani 👋</h3>
             <p>
