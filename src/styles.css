@@ -1388,3 +1388,44 @@
 }
 
 
+
+/* ===========================
+   GLOBAL TECH BACKGROUND ON ALL SECTIONS
+=========================== */
+
+.about,
+.skills,
+.skills-section,
+.projects,
+.certifications,
+.contact {
+  background: transparent !important;
+}
+
+.about,
+.skills,
+.skills-section,
+.projects,
+.certifications,
+.contact {
+  position: relative;
+}
+
+.about::before,
+.skills::before,
+.skills-section::before,
+.projects::before,
+.certifications::before,
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 8, 20, 0.55);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.background {
+  height: 100%;
+  min-height: 100vh;
+}
